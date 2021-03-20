@@ -76,7 +76,7 @@ router.get('/login/:emaill/:pass', function(req, res, next) {
 router.get('/interest', function(req, res, next) {
   Post.find({}).sort({interest: -1}).limit(3).exec(
       function(err, posts) {
-        res.send(posts);
+        res.render('index');
 
       }
   );});
